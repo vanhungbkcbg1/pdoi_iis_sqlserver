@@ -6,6 +6,7 @@ try {
     $database = "test";
     $conn = new PDO("sqlsrv:server=$serverName;database=$database", $uid, $pwd);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "connected";
 
 } catch (Exception $e) {
     echo $e->getMessage();
